@@ -4,12 +4,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from dash import Dash, html, dcc
 
-# df = pd.read_csv('ecommerce_estatistica.csv')
-
-# # Selecionando os campos que serão trabalhados
-# df = df[['Nota', 'N_Avaliações', 'Desconto', 'Gênero', 'Temporada', 'Qtd_Vendidos', 'Preço', 'Marca_Cod', 'Material_Cod', 'Temporada_Cod', 'Qtd_Vendidos_Cod', 'Marca_Freq','Material_Freq']]
-# print(df.head().to_string())
-
 def criar_graficos(df):
     # Grafíco de Histograma
     fig1 = px.histogram(df, x='Preço', nbins=30, title='Histograma - Distribuição de Preços de Produtos')
